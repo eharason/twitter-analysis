@@ -23,8 +23,11 @@ module.exports = {
 npm install
 node server.js
 ```
-5. Navigate to `localhost:3000`. You should see an HTML page with all of the popular and latest tweets for that hashtag
-
+5. Navigate to `localhost:3000`
+   1. In the input box, type in a hashtag to view the latest tweets, e.g. `#stayAtHome`
+   1. Click the `Analyze` button
+   1. Your page should now display all of the popular and latest tweets for that hashtag
+   
 ## What's next?
 
 - Use this repo as a starting point to take this track to the next level!
