@@ -8,19 +8,16 @@ This repo contains the complete code for what was covered in the [FTL Hackathon]
 1. Clone this repo
 1. Create a new app in your [Twitter Developer Account](http://developer.twitter.com/)
    1. If you do not have a Twitter Developer Account, please ping one of the mentors who will add you to our Twitter **FTL Hackathons Team** Developer Account. You'll just need to provide us with your twitter handle
-1. In `server.js` update the Twitter instance with your app's API credentials (this is the app you created in step #2)
+1. Create a `twitterConfig.js` file at the same level as `server.js` with the following contents (from that app you created in #2):
 
 ```javascript
-let Twitter = new twit({
+module.exports = {
         consumer_key: 'your_consumer_key',
         consumer_secret: 'your_consumer_secret',
         access_token: 'your_access_token',
         access_token_secret: 'your_access_token_secret',
-        timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
-        strictSSL: true, // optional - requires SSL certificates to be valid.
-    });
+}
 ```
-
 4. Install dependencies and run the server!
 ```
 npm install
