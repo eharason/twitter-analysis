@@ -23,20 +23,19 @@
             </fieldset>
         </div>
 
-
         <div class="container-fluid">
 
         </div>
-        <% if (hashtag !== null){ %>
+        <% if (hashtag){ %>
             <h3>All popular tweets for <%- hashtag %></h3>
         <% } %>
 
         <div id="tweets"></div>
 
-        <% if(twitterData !== null){ %>
+        <% if(twitterData){ %>
 
         <script>
-            let twitterData = <% - JSON.stringify(twitterData) %>;
+            let twitterData = <%- JSON.stringify(twitterData) %>;
             let tweetHTML = '<div class="row">';
             for (let index = 0; index < twitterData.statuses.length; index++) {
                 var createdDateTime = new Date(twitterData.statuses[index].created_at).toUTCString();
